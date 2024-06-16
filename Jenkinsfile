@@ -24,15 +24,15 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Maven build
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
 
         stage('SonarQube Analysis') {
             steps {
                 // Run SonarQube analysis
-                withSonarQubeEnv('SonarQube') {
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=Krasv_bank -Dsonar.projectName=Krasv_bank -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_77a1596f0f95373bae2a4689928d661436d0326b'
+                withSonarQubeEnv('server sonar') {
+                    bat 'mvn sonar:sonar -Dsonar.projectKey=Krasv_bank -Dsonar.projectName=Krasv_bank -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_77a1596f0f95373bae2a4689928d661436d0326b'
                 }
             }
         }
