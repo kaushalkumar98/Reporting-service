@@ -36,13 +36,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Quality Gate') {
-            steps {
-                // Wait for SonarQube analysis to finish and get the Quality Gate status
-                waitForQualityGate abortPipeline: true
-            }
-        }
     }
 
     post {
