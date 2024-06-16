@@ -9,8 +9,8 @@ pipeline {
 
     environment {
         // Define SonarQube environment variables
-        SONARQUBE_URL = 'http://localhost:9000/'
-        SONARQUBE_TOKEN = credentials('krasv_bank')
+        SONARQUBE_URL = 'http://localhost:9000'
+        SONARQUBE_TOKEN = credentials('Krasv_bank')
     }
 
     stages {
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 // Run SonarQube analysis
                 withSonarQubeEnv('SonarQube') {
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=Krasv_bank -Dsonar.projectName='Krasv_bank' -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_77a1596f0f95373bae2a4689928d661436d0326b'
+                    sh 'mvn sonar:sonar -Dsonar.projectKey=Krasv_bank -Dsonar.projectName=Krasv_bank -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_77a1596f0f95373bae2a4689928d661436d0326b'
                 }
             }
         }
