@@ -17,7 +17,7 @@ pipeline {
                 script {
                     node {
                         // Checkout code from GitHub
-                        git branch: 'master', url: 'https://github.com/kaushalkumar98/Reporting-service.g
+                        git branch: 'master', url: 'https://github.com/kaushalkumar98/Reporting-service.git
                     }
                 }
             }
