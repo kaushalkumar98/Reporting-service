@@ -10,7 +10,7 @@ pipeline {
     environment {
         // Define SonarQube environment variables
         SONARQUBE_URL = 'https://localhost/9000'
-        SONARQUBE_TOKEN = credentials('sqp_77a1596f0f95373bae2a4689928d661436d0326b')
+        SONARQUBE_TOKEN = credentials('krasv_bank')
     }
 
     stages {
