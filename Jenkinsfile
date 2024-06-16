@@ -17,7 +17,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from GitHub
-                git branch: 'main', url: 'https://github.com/kaushalkumar98/Reporting-service.git'
+                git branch: 'master', url: 'https://github.com/kaushalkumar98/Reporting-service.git'
             }
         }
 
